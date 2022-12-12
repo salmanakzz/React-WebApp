@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Euclid Circular A";
+  src: local("Euclid Circular A"),
+    url(./fonts/Euclid\ Circular\ A\ Medium.ttf) format("truetype");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+@keyframes rotate {
+  100% {
+    background-position: 15% 50%;
+  }
+}
+
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0 24px;
+  background-image: url("./assets/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Euclid Circular A" !important;
+  color: #000;
+  animation: rotate 6s infinite alternate linear;
+  line-height: 1.2 !important;
+}
+
+@media (width <= 768px) {
+  body {
+    background-size: auto;
+    animation: rotate 100s infinite alternate linear;
+  }
+}
+
+@media (width >= 500px) {
+  body {
+    padding: 0;
+  }
+}
